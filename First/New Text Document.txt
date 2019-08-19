@@ -1,0 +1,67 @@
+#include "stdafx.h"
+#include "Stack.h"
+#include<iostream>
+Stack::Stack()
+{
+	top = -1;
+	size=100;
+	item = new itemtype[size];
+}
+void Stack::push(itemtype value)
+{
+	if (top == (size - 1)) return;
+	top++;
+	item[top] = value;
+}
+void Stack::pop()
+{
+	if (isEmpty()) return;
+	top--;
+}
+struct Stack_With_LinkedList
+{
+	Stack_With_LinkedList* next; int data;
+	Stack_With_LinkedList* top = nullptr;
+	void push(int value) {
+		Stack_With_LinkedList* newnode = new Stack_With_LinkedList;
+		newnode->data = value;
+		if (isEmpty())
+			newnode->next = nullptr;
+		else
+			newnode->next = top;
+		top = newnode;	
+	}
+	void pop()
+	{
+		if (isEmpty())
+         	exit(0);
+		Stack_With_LinkedList* temp = top;
+			top = top->next;
+			delete temp;
+	}
+	int topValue()
+	{
+		if (isEmpty())
+			exit(0);
+		else return top->data;
+	}
+	bool isEmpty() {
+		if (top == nullptr)
+			return true;
+		else return false;
+	}
+};
+bool Stack::isEmpty()
+{
+	if (top == -1) return true;
+	return false;
+}
+itemtype Stack::top_value()
+{
+	if (isEmpty()) return -1;
+	return item[top];
+}
+Stack::~Stack()
+{
+	top = -1;
+}

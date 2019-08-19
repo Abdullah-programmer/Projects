@@ -1,0 +1,4 @@
+﻿  First.cpp
+e:\first\first\first.cpp(751): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+e:\first\first\first.cpp(744): warning C4715: 'Mathoperation': not all control paths return a value
+  First.vcxproj -> E:\First\x64\Debug\First.exe

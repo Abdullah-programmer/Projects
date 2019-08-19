@@ -1,0 +1,6 @@
+﻿  Stack.cpp
+e:\first\first\stack.cpp(63): warning C4018: '<': signed/unsigned mismatch
+e:\first\first\stack.cpp(77): warning C4018: '<': signed/unsigned mismatch
+e:\first\first\stack.cpp(90): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+e:\first\first\stack.cpp(97): warning C4244: '=': conversion from 'double' to 'unsigned int', possible loss of data
+  First.vcxproj -> E:\First\Debug\First.exe
